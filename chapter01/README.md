@@ -33,7 +33,7 @@ The result is 255 on Linux/Mac OS.
 
 > Explain whether the following program fragment is legal.
 
-It's illegal because the left-hand operator must be an ostream object. It can be fixed removing the semicolons the first 2 semicolons:
+It's illegal because the left-hand operator must be an `ostream` object. It can be fixed removing the first two semicolons:
 
 ```cpp
 std::cout << "The sum of " << v1 
@@ -113,4 +113,4 @@ In these examples, the advantage to use a for loop is that we don't need to inst
 
 If the input values are all equal, it will print the count of the number. Otherwise, a line for each number.
 
-
+##[Exercise 1.19](ex_1_19.cc)
