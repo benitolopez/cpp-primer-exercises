@@ -54,8 +54,11 @@ Output:
 ```
 
 (a): character literal, wide character literal, string literal, string wide character literal.
+
 (b): decimal, unsigned decimal, long decimal, unsigned long decimal, octal, hexadecimal.
+
 (c): double, float, long double.
+
 (d): decimal, unsigned decimal, double, double.
 
 ##Exercise 2.6
@@ -67,4 +70,5 @@ int month = 09, day = 07;
 ```
 
 `int month = 9, day = 7` are decimals.
+
 `month = 09` is invalid, because octal don't have digit 9. `day = 07` is octal.
