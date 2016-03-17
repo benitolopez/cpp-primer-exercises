@@ -23,11 +23,11 @@ ln -s  gcc-5  gcc
 
 The result is 255 on Linux/Mac OS.
 
-##[Exercise 1.3](ex_1_3.cpp)
+##[Exercise 1.3](ex_1_3.cc)
 
-##[Exercise 1.4](ex_1_4.cpp)
+##[Exercise 1.4](ex_1_4.cc)
 
-##[Exercise 1.5](ex_1_5.cpp)
+##[Exercise 1.5](ex_1_5.cc)
 
 ##Exercise 1.6
 
@@ -80,9 +80,9 @@ Fix:
 std::cout << /* "*/" */";
 ```
 
-##[Exercise 1.9](ex_1_9.cpp)
-##[Exercise 1.10](ex_1_10.cpp)
-##[Exercise 1.11](ex_1_11.cpp)
+##[Exercise 1.9](ex_1_9.cc)
+##[Exercise 1.10](ex_1_10.cc)
+##[Exercise 1.11](ex_1_11.cc)
 
 ##Exercise 1.12
 
@@ -95,7 +95,7 @@ sum += i;
 
 The result is 0. The for loop sums the positive and negative numbers between 0 and 100 (ie. -99 + 99, -88 + 88, etc).
 
-##[Exercise 1.13](ex_1_13.cpp)
+##[Exercise 1.13](ex_1_13.cc)
 
 ##Exercise 1.14
 
@@ -103,9 +103,9 @@ The result is 0. The for loop sums the positive and negative numbers between 0 a
 
 In these examples, the advantage to use a for loop is that we don't need to instantiate the `val` variable and we don't need to increase manually the count of `val`.
 
-##[Exercise 1.15](ex_1_15.cpp)
+##[Exercise 1.15](ex_1_15.cc)
 
-##[Exercise 1.16](ex_1_16.cpp)
+##[Exercise 1.16](ex_1_16.cc)
 
 ##Exercise 1.17 and 1.18
 
