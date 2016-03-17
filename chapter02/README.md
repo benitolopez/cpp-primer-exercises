@@ -121,3 +121,21 @@ double salary = wage = 9999.99;
 ```
 
 (d) Legal, but the value will be truncated to 3.
+
+##Exercise 2.10
+
+> What are the initial values, if any, of each of the following variables?
+```cpp
+std::string global_str;
+int global_int;
+int main()
+{
+    int local_int;
+    std::string local_str;
+}
+```
+
+	`global_str`: empty string.
+	`global_int`: 0.
+	`local_int`: 0.
+	`local_str`: empty string.
