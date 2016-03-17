@@ -84,8 +84,11 @@ int month = 09, day = 07;
 ```
 
 (a) Who goes with Fergus?(new line) / `string`
+
 (b) 31.4 / `long double`
+
 (c) Error, suffix f is valid only with floating point literals
+
 (d) 3.14 / `long double`
 
 ##[Exercise 2.8](ex_2_8.cc)
@@ -136,8 +139,11 @@ int main()
 ```
 
 `global_str`: empty string.
+
 `global_int`: 0.
+
 `local_int`: 0.
+
 `local_str`: empty string.
 
 ##Exercise 2.11
@@ -150,7 +156,9 @@ int main()
 ```
 
 (a) Definition
+
 (b) Definition
+
 (c) Declaration
 
 ##Exercise 2.12
