@@ -46,12 +46,10 @@ Output:
 ##Exercise 2.5
 
 > Determine the type of each of the following literals. Explain the differences among the literals in each of the four examples:
-```cpp
 (a) 'a', L'a', "a", L"a"
 (b) 10, 10u, 10L, 10uL, 012, 0xC
 (c) 3.14, 3.14f, 3.14L
 (d) 10, 10u, 10., 10e-2
-```
 
 (a): character literal, wide character literal, string literal, string wide character literal.
 
@@ -72,3 +70,48 @@ int month = 09, day = 07;
 `int month = 9, day = 7` are decimals.
 
 `month = 09` is invalid, because octal don't have digit 9. `day = 07` is octal.
+
+##Exercise 2.7
+
+> What values do these literals represent? What type does each have?
+(a) "Who goes with F\145rgus?\012"
+(b) 3.14e1L
+(c) 1024f
+(d) 3.14L
+
+(a) Who goes with Fergus?(new line) / `string`
+(b) 31.4 / `long double`
+(c) Error, suffix f is valid only with floating point literals
+(d) 3.14 / `long double`
+
+##[Exercise 2.8](ex_2_8.cc)
+
+##Exercise 2.9
+
+> What values do these literals represent? What type does each have?
+(a) std::cin >> int input_value;
+(b) int i = { 3.14 };
+(c) double salary = wage = 9999.99;
+(d) int i = 3.14;
+
+(a) Error. It can be fixed with:
+
+```cpp
+int input_value = 0;
+std::cin >> input_value;
+```
+
+(b) Error. Narrowing conversion from `double` to `int`. Fix:
+
+```cpp
+double i = { 3.14 };
+```
+
+(c) Error. `wage` not declared. Fix:
+
+```cpp
+double wage;
+double salary = wage = 9999.99;
+```
+
+(d) Legal, but the value will be truncated to 3.
