@@ -114,3 +114,17 @@ In these examples, the advantage to use a for loop is that we don't need to inst
 If the input values are all equal, it will print the count of the number. Otherwise, a line for each number.
 
 ##[Exercise 1.19](ex_1_19.cc)
+
+##[Exercise 1.20](ex_1_20.cc)
+
+##[Exercise 1.21](ex_1_21.cc)
+
+##[Exercise 1.22](ex_1_22.cc)
+
+##[Exercise 1.23 and 1.24](ex_1_23.cc)
+
+##Exercise 1.25
+
+> Using the Sales_item.h header from the Web site, compile and execute the bookstore program presented in this section.
+
+See [Exercise 1.22](ex_1_22.cc).
