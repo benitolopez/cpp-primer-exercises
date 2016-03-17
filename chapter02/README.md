@@ -135,7 +135,33 @@ int main()
 }
 ```
 
-	`global_str`: empty string.
-	`global_int`: 0.
-	`local_int`: 0.
-	`local_str`: empty string.
+`global_str`: empty string.
+`global_int`: 0.
+`local_int`: 0.
+`local_str`: empty string.
+
+##Exercise 2.11
+
+> Explain whether each of the following is a declaration or a definition:
+```cpp
+(a) extern int ix = 1024;
+(b) int iy;
+(c) extern int iz;
+```
+
+(a) Definition
+(b) Definition
+(c) Declaration
+
+##Exercise 2.12
+
+> Which, if any, of the following names are invalid?
+```cpp
+(a) int double = 3.14;
+(b) int _;
+(c) int catch-22;
+(d) int 1_or_2 = 1;
+(e) double Double = 3.14;
+```
+
+`a`, `c` and `d`.
