@@ -46,10 +46,12 @@ Output:
 ##Exercise 2.5
 
 > Determine the type of each of the following literals. Explain the differences among the literals in each of the four examples:
+```cpp
 (a) 'a', L'a', "a", L"a"
 (b) 10, 10u, 10L, 10uL, 012, 0xC
 (c) 3.14, 3.14f, 3.14L
 (d) 10, 10u, 10., 10e-2
+```
 
 (a): character literal, wide character literal, string literal, string wide character literal.
 
@@ -74,10 +76,12 @@ int month = 09, day = 07;
 ##Exercise 2.7
 
 > What values do these literals represent? What type does each have?
+```cpp
 (a) "Who goes with F\145rgus?\012"
 (b) 3.14e1L
 (c) 1024f
 (d) 3.14L
+```
 
 (a) Who goes with Fergus?(new line) / `string`
 (b) 31.4 / `long double`
@@ -89,10 +93,12 @@ int month = 09, day = 07;
 ##Exercise 2.9
 
 > What values do these literals represent? What type does each have?
+```cpp
 (a) std::cin >> int input_value;
 (b) int i = { 3.14 };
 (c) double salary = wage = 9999.99;
 (d) int i = 3.14;
+```
 
 (a) Error. It can be fixed with:
 
