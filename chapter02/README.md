@@ -173,3 +173,74 @@ int main()
 ```
 
 `a`, `c` and `d`.
+
+##Exercise 2.13
+
+> What is the value of j in the following program?
+```cpp
+int i = 42;
+int main()
+{
+    int i = 100;
+    int j = i;
+}
+```
+
+`100`.
+
+##Exercise 2.14
+
+> Is the following program legal? If so, what values are printed?
+```cpp
+int i = 100, sum = 0;
+for (int i = 0; i != 10; ++i)
+    sum += i;
+std::cout << i << " " << sum << std::endl;
+```
+
+Legal. `100 45`. But is considered a bad practice using a local variable with the same name of a global variable.
+
+##Exercise 2.15
+
+> Which of the following definitions, if any, are invalid? Why?
+```cpp
+(a) int ival = 1.01;
+(b) int &rval1 = 1.01;
+(c) int &rval2 = ival;
+(d) int &rval3;
+```
+
+(a) Valid (but the value will be truncated).
+
+(b) Invalid. Initializer must be an object.
+
+(c) Valid.
+
+(d) Invalid. A reference must be initialized.
+
+##Exercise 2.16
+
+> Which, if any, of the following assignments are invalid? If they are valid, explain what they do.
+```cpp
+int i = 0, &r1 = i; double d = 0, &r2 = d;
+(a) r2 = 3.14159;
+(b) r2 = r1;
+(c) i = r2;
+(d) r1 = d;
+```
+
+(a) Valid.
+(b) Valid.
+(c) Valid (but the value will be truncated).
+(d) Valid (but the value will be truncated).
+
+##Exercise 2.17
+
+> What does the following code print?
+```cpp
+int i, &ri = i;
+i = 5; ri = 10;
+std::cout << i << " " << ri << std::endl;
+```
+
+`10 10`.
