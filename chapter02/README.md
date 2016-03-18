@@ -230,8 +230,11 @@ int i = 0, &r1 = i; double d = 0, &r2 = d;
 ```
 
 (a) Valid.
+
 (b) Valid.
+
 (c) Valid (but the value will be truncated).
+
 (d) Valid (but the value will be truncated).
 
 ##Exercise 2.17
@@ -244,3 +247,79 @@ std::cout << i << " " << ri << std::endl;
 ```
 
 `10 10`.
+
+##Exercise 2.18
+
+> Write code to change the value of a pointer. Write code to change the value to which the pointer points.
+
+```cpp
+int a = 40, b = 20;
+int *pa = &a, *pb = &b;
+
+// change the value of a pointer
+pa = &b;
+
+// change the value to which the pointer points
+*pb = 30;
+```
+
+##Exercise 2.19
+
+> Explain the key differences between pointers and references.
+
+A pointer is an object in its own right and it need not be initialized at the time is defined. Also, a pointer can be assigned and copied or it can point to several different objects over its lifetime. 
+
+##Exercise 2.20
+
+> What does the following program do?
+```cpp
+int i = 42;
+int *p1 = &i; *p1 = *p1 * *p1;
+```
+
+`p1` points to `i` (`i` equals to `42`). Then the value of `i` is changed to 1764.
+
+##Exercise 2.21
+
+> Explain each of the following definitions. Indicate whether any are illegal and, if so, why.
+```cpp
+int i = 0;
+(a) double* dp = &i;
+(b) int *ip = i;
+(c) int *p = &i;
+```
+
+(a) Illegal. Different types.
+
+(b) Illegal. Cannot assign an integer to a pointer.
+
+(c) Legal.
+
+##Exercise 2.22
+
+> Assuming p is a pointer to int, explain the following code:
+```cpp
+if (p) // ...
+if (*p) // ...
+```
+
+`if (p) // ...` returns `false` if the value of `p` is 0. Otherwise it returns `true`.
+
+`if (*p) // ...` returns `false` if the value pointed by `p` is 0. Otherwise it returns `true`.
+
+##Exercise 2.23
+
+> Given a pointer p, can you determine whether p points to a valid object? If so, how? If not, why not?
+
+No.
+
+##Exercise 2.24
+
+> Why is the initialization of p legal but that of lp illegal?
+```cpp
+int i = 42;
+void *p = &i;
+long *lp = &i;
+```
+
+`long *lp = &i;` is illegal because they are different types. `void *p = &i;` is legal because `void` is a special pointer that may point to any type.
