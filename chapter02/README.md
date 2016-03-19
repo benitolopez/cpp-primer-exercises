@@ -430,3 +430,74 @@ long *lp = &i;
 (e) Illegal, `p2` is a const pointer.
 
 (f) Illegal, `ic` is a const int.
+
+##Exercise 2.30
+
+> For each of the following declarations indicate whether the object being declared has top-level or low-level const.
+```cpp
+const int v2 = 0; int v1 = v2;
+int *p1 = &v1, &r1 = v1;
+const int *p2 = &v2, *const p3 = &i, &r2 = v2;
+```
+
+`v2` is top-level const. `p2v is low-level const. `p3` is both low-level and top-level const. `r2` is low-level const.
+
+##Exercise 2.31
+
+> Given the declarations in the previous exercise determine whether the following assignments are legal. Explain how the top-level or low-level const applies in each case.
+```cpp
+(a) r1 = v2;
+(b) p1 = p2;
+(c) p2 = p1;
+(d) p1 = p3;
+(e) p2 = p3;
+```
+
+(a) Legal.
+
+(b) Illegal.
+
+(c) Legal.
+
+(d) Illegal.
+
+(e) Legal.
+
+##Exercise 2.32
+
+> Is the following code legal or not? If not, how might you make it legal?
+```cpp
+int null = 0, *p = null;
+```
+
+Illegal. Fix:
+
+```cpp
+int null = 0, *p = nullptr;
+```
+
+##Exercise 2.33
+
+> Using the variable definitions from this section, determine what happens in each of these assignments:
+```cpp
+(a) a = 42; // set 42 to int a.
+(b) b = 42; // set 42 to int b.
+(c) c = 42; // set 42 to int c.
+(d) d = 42; // ERROR, d is an int *. correct: *d = 42;
+(e) e = 42; // ERROR, e is an const int *. correct: e = &c;
+(f) g = 42; // ERROR, g is a const int& that is bound to ci.
+```
+
+(a) Set 42 to int `a`.
+
+(b) Set 42 to int `b`.
+
+(c) Set 42 to int `c`.
+
+(d) Error, `d` is an int *. correct: `*d = 42;`
+
+(e) Error, `e` is an const int *. `correct: e = &c;`
+
+(f) Error, `g` is a const int& that is bound to `ci`.
+
+##[Exercise 2.34](ex_2_34.cc)
