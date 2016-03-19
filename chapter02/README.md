@@ -322,4 +322,111 @@ void *p = &i;
 long *lp = &i;
 ```
 
-`long *lp = &i;` is illegal because they are different types. `void *p = &i;` is legal because `void` is a special pointer that may point to any type.
+`long *lp = &i;` is illegal because they are different types. 
+
+`void *p = &i;` is legal because `void` is a special pointer that may point to any type.
+
+##Exercise 2.25
+
+> Determine the types and values of each of the following variables.
+```cpp
+(a) int* ip, i, &r = i;
+(b) int i, *ip = 0;
+(c) int* ip, ip2;
+```
+
+(a) `ip` is a pointer to `int`, `i` is an `int`, `r` is a reference to `i` (`int`).
+
+(b) `i` is an `int`, `ip` is a null pointer.
+
+(c) `ip` is a pointer to `int`, `ip2` is an `int`.
+
+##Exercise 2.26
+
+> Which of the following are legal? For those that are illegal, explain why.
+```cpp
+(a) const int buf;
+(b) int cnt = 0;
+(c) const int sz = cnt;
+(d) ++cnt; ++sz;
+```
+
+(a) Illegal. A `const` must be initialized.
+
+(b) Legal.
+
+(c) Legal.
+
+(d) Illegal, the value of a `const` (`sz`) can't be modified.
+
+##Exercise 2.27
+
+> Which of the following initializations are legal? Explain why.
+```cpp
+(a) int i = -1, &r = 0; 
+(b) int *const p2 = &i2; 
+(c) const int i = -1, &r = 0;
+(d) const int *const p3 = &i2; 
+(e) const int *p1 = &i2; 
+(f) const int &const r2;
+(g) const int i2 = i, &r = i;
+```
+
+(a) Illegal, `r` must refer to an object.
+
+(b) Legal.
+
+(c) Legal.
+
+(d) Legal.
+
+(e) Legal.
+
+(f) Illegal, a reference cannot be const.
+
+(g) Legal.
+
+##Exercise 2.28
+
+> Explain the following definitions. Identify any that are illegal.
+```cpp
+(a) int i, *const cp;
+(b) int *p1, *const p2;
+(c) const int ic, &r = ic;
+(d) const int *const p3;
+(e) const int *p;
+```
+
+(a) Illegal, `cp` must be initialized.
+
+(b) Illegal, `p2` must be initialized.
+
+(c) Illegal, `ic` must be initialized.
+
+(d) Illegal, `p3` must be initialized.
+
+(e) Legal, pointer to const int.
+
+##Exercise 2.29
+
+> Using the variables in the previous exercise, which of the following assignments are legal? Explain why.
+```cpp
+(a) i = ic;
+(b) p1 = p3;
+(c) p1 = &ic;
+(d) p3 = &ic;
+(e) p2 = p1;
+(f) ic = *p3;
+```
+
+(a) Legal.
+
+(b) Illegal, `p3` is a pointer to const int.
+
+(c) Illegal, `ic` is a const int.
+
+(d) Illegal, `p3` is a const pointer.
+
+(e) Illegal, `p2` is a const pointer.
+
+(f) Illegal, `ic` is a const int.

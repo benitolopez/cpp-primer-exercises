@@ -32,6 +32,11 @@ The result is 255 on Linux/Mac OS.
 ##Exercise 1.6
 
 > Explain whether the following program fragment is legal.
+```cpp
+std::cout << "The sum of " << v1 ;
+	<< " and " << v2;
+	<< " is " << v1 + v2 << std::endl;
+```
 
 It's illegal because the left-hand operator must be an `ostream` object. It can be fixed removing the first two semicolons:
 
