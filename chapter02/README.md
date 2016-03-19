@@ -509,3 +509,35 @@ int null = 0, *p = nullptr;
 ##[Exercise 2.34](ex_2_34.cc)
 
 ##[Exercise 2.35](ex_2_35.cc)
+
+##Exercise 2.36
+
+> In the following code, determine the type of each variable and the value each variable has when the code finishes:
+```cpp
+int a = 3, b = 4;
+decltype(a) c = a;
+decltype((b)) d = a;
+++c;
+++d;
+```
+
+`c` is an int, `d` is a reference of `a`. The value is `4`.
+
+##Exercise 2.37
+
+> Assignment is an example of an expression that yields a reference type. The type is a reference to the type of the left-hand operand. That is, if i is an int, then the type of the expression i = x is int&. Using that knowledge, determine the type and value of each variable in this code:
+```cpp
+int a = 3, b = 4;
+decltype(a) c = a;
+decltype(a = b) d = a;
+```
+
+`c` is an int, `d` is a reference of int. the value: `a = 3, b = 4, c = 3 and d = 3`.
+
+##Exercise 2.38
+
+> Describe the differences in type deduction between decltype and auto. Give an example of an expression where auto and decltype will deduce the same type and an example where they will deduce differing types.
+
+When the expression to which we apply `decltype` is a variable. `decltype` return the type of that variable, including top-level `const` and references. 
+
+`decltype` is the only context in which a variable defined as a reference is not treated as a synonym for the object to which it refers.
