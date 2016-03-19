@@ -440,7 +440,13 @@ int *p1 = &v1, &r1 = v1;
 const int *p2 = &v2, *const p3 = &i, &r2 = v2;
 ```
 
-`v2` is top-level const. `p2v is low-level const. `p3` is both low-level and top-level const. `r2` is low-level const.
+`v2` is top-level const.
+
+`p2v` is low-level const.
+
+`p3` is both low-level and top-level const.
+
+`r2` is low-level const.
 
 ##Exercise 2.31
 
@@ -501,3 +507,5 @@ int null = 0, *p = nullptr;
 (f) Error, `g` is a const int& that is bound to `ci`.
 
 ##[Exercise 2.34](ex_2_34.cc)
+
+##[Exercise 2.35](ex_2_35.cc)
